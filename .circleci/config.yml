@@ -14,3 +14,9 @@ jobs:
           name: Install ssh
           command: apk add --no-cache openssh
       - checkout
+      - run:
+          name: Install CF Cli
+          command: |
+            apk add --no-cache curl
+            curl -L "https://packages.cloudfoundry.org/stable?release=linux64-binary&source=github" | tar -zx
+            cf -v
