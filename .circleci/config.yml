@@ -7,4 +7,7 @@ jobs:
       - run:
           name: Install git
           command: apk add --no-cache git
+      - run:
+          name: Install ssh
+          command: apk add --no-cache ssh
       - checkout
