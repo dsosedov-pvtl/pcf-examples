@@ -6,5 +6,5 @@ jobs:
     steps:
       - run:
           name: Install git
-          command: apk add --no-cache mysql-client
+          command: apk add --no-cache git
       - checkout
