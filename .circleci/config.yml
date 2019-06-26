@@ -5,9 +5,12 @@ jobs:
       - image: 'alpine'
     steps:
       - run:
+          name: Make sure everything is up-to-date
+          command: apk update --no-cache
+      - run:
           name: Install git
           command: apk add --no-cache git
       - run:
           name: Install ssh
-          command: apk add --no-cache ssh
+          command: apk add --no-cache openssh
       - checkout
