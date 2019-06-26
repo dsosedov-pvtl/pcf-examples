@@ -20,4 +20,6 @@ jobs:
             apk add --no-cache curl
             curl -L "https://packages.cloudfoundry.org/stable?release=linux64-binary&source=github" | tar -zx
             mv cf /usr/local/bin
-            cf -v
+      - run:
+          name: Login to CF
+          command: cf login -a api.run.pcfone.io -o $CF_ORG -s $CF_SPACE -u $CF_USERNAME -p $CF_PASSWORD
