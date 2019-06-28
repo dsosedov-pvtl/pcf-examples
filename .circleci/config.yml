@@ -22,5 +22,4 @@ jobs:
             mv cf /usr/local/bin
       - run:
           name: Login to CF
-          #command: cf login -a api.run.pcfone.io -o $CF_ORG -s $CF_SPACE -u $CF_USERNAME -p $CF_PASSWORD
-          command: cf login -a api.run.pcfone.io -o $CF_ORG -s $CF_SPACE -sso
+          command: cf login -a api.run.pcfone.io -o $CF_ORG -s $CF_SPACE -u $CF_USERNAME -p $CF_PASSWORD
