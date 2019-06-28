@@ -1,0 +1,8 @@
+---
+applications:
+- name: dsosedov-cf-sample-php
+  memory: 32M
+  disk_quota: 512M
+  instances: 1
+  buildpacks:
+    - https://github.com/cloudfoundry/php-buildpack.git
